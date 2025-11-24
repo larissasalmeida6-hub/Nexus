@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(imgs/imgfundo.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* Fundo azul escuro translúcido */
+.login-wrapper {
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 60, 120, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD estilo Nexus */
+.login-box {
+    width: 80%;
+    max-width: 900px;
+    height: 93%;
+    background: rgba(255, 255, 255, 0.90);
+    padding: 50px 70px;
+    border-radius: 30px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+/* LOGO */
+.logo-img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Título */
+.welcome {
+    margin: 10px 0 30px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+/* Labels */
+.label {
+    text-align: left;
+    font-size: 15px;
+    color: #1e293b;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 2px solid #dce3ee;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+/* Link esqueci senha */
+.forgot {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    color: #1e3a8a;
+    margin-top: -10px;
+    margin-bottom: 25px;
+    text-decoration: none;
+}
+
+/* BOTÃO */
+.btn {
+    width: 100%;
+    padding: 13px;
+    background: #1e40af;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn:hover {
+    background: #1a3089;
+    transform: translateY(-2px);
+}
