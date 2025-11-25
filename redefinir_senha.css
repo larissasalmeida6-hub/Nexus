@@ -1,0 +1,157 @@
+/* Importação de fonte para consistência */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+    /* Cores consistentes com o design NEXUS */
+    --color-primary: #008080; 
+    --color-button: #10418c; /* Azul marinho escuro do botão */
+    --color-button-hover: #0d326b; 
+    --color-overlay: rgba(0, 50, 100, 0.5); /* Overlay Azul Escuro */
+    --color-card-background: rgba(254, 254, 254, 0.669); /* Card Branco-azulado */
+    --color-text-dark: #333;
+    --color-text-light: #666; /* Cor do link de retorno */
+}
+
+/* Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+/* 🖼️ Estilização do Fundo e Overlay */
+.screen-wrapper {
+    /* Use o caminho correto da sua imagem de fundo */
+    background: url('imgs/imgfundo.jpeg') no-repeat center center/cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.screen-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-overlay); 
+    z-index: 1; 
+}
+
+/* 💳 Estilização do Card */
+.card-box {
+    background-color: var(--color-card-background);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    z-index: 2; 
+}
+
+/* 🖼️ Logo */
+.logo-img {
+    width: 100px; 
+    height: auto;
+    margin-bottom: 25px;
+}
+
+/* 📝 Título (Crie sua nova senha!) */
+.title {
+    font-size: 1.6rem;
+    color: var(--color-text-dark);
+    font-weight: 600;
+    /* Margem para separar do formulário */
+    margin-bottom: 40px; 
+}
+
+/* 📝 Formulário e Campos de Input */
+#resetForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+/* Os inputs na imagem não têm labels visíveis, mas estão bem espaçados */
+.input {
+    width: 100%;
+    padding: 15px 20px;
+    /* Espaço entre os inputs */
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: white; 
+}
+
+/* Espaço extra abaixo do último input (confirm) para o botão */
+#resetForm input:last-of-type {
+    margin-bottom: 30px; /* Ajuste o espaçamento aqui para ficar mais parecido com a imagem */
+}
+
+.input:focus {
+    border-color: var(--color-primary); 
+}
+
+/* 🚀 Botão 'Salvar nova senha' */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-button); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Espaço entre o botão e o link de retorno */
+    margin-bottom: 30px; 
+}
+
+.btn:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* 🔙 Link de Retorno (Voltar para o login) */
+.link {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: var(--color-primary);
+}
+
+/* 📱 Responsividade */
+@media (max-width: 600px) {
+    .card-box {
+        padding: 30px;
+        margin: 20px;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+}
